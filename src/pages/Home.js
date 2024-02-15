@@ -12,12 +12,12 @@ function Home() {
   }, []);
 
   const loadTasks = async () => {
-    const result = await axios.get("/view_tasks");
+    const result = await axios.get("https://task-manger-backend-7bzm.onrender.com/view_tasks");
     setTasks(result.data.tasks);
   };
 
   const deleteTask = async (id) => {
-    await axios.delete(`/delete_task/${id}`);
+    await axios.delete(`https://task-manger-backend-7bzm.onrender.com/delete_task/${id}`);
     loadTasks();
   };
 

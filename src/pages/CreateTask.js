@@ -35,7 +35,7 @@ function CreateTask() {
   
     // If all required fields are filled, proceed with form submission
     await axios
-      .post("/new_task", taskDetails)
+      .post("https://task-manger-backend-7bzm.onrender.com//new_task", taskDetails)
       .then((response) => {
         if (response.data.success) {
           setMessage(response.data.message);

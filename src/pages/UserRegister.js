@@ -18,7 +18,7 @@ function UserRegister() {
   const submit = async (e) => {
     e.preventDefault();
     await axios
-      .post("/register", userDetails)
+      .post("https://task-manger-backend-7bzm.onrender.com/register", userDetails)
       .then((response) => {
         if (response.data.success) {
           setMessage(response.data.message);

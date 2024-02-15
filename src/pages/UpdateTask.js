@@ -25,7 +25,7 @@ function UpdateTask() {
 
   const loadTask = async () => {
     await axios
-      .get(`/get_task/${id}`)
+      .get(`https://task-manger-backend-7bzm.onrender.com/get_task/${id}`)
       .then((response) => {
         if (response.data.success) {
           setTaskDetails(response.data.task);
@@ -40,7 +40,7 @@ function UpdateTask() {
     e.preventDefault();
 
     await axios
-      .put(`/update_task/${id}`, taskDetails)
+      .put(`https://task-manger-backend-7bzm.onrender.com/update_task/${id}`, taskDetails)
       .then((response) => {
         if (response.data.success) {
           setMessage(response.data.message);
